@@ -1,11 +1,19 @@
-public class Rectangle extends Figure {
+public class Rectangle implements Figure {
 
-    public static double calculateSquare(double wight, double hight) {
-        return wight*hight;
+    private double wight, hight;
 
+    public Rectangle(double wight, double hight) {
+        this.wight = wight;
+        this.hight = hight;
     }
 
-    public static double calculatePerimeter(double wight, double hight) {
-        return (wight+hight)*2;
+    @Override
+    public double calculateSquare() {
+        return wight * hight;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return (wight + hight) * 2;
     }
 }

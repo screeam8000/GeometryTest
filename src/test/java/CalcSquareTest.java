@@ -7,16 +7,20 @@ public class CalcSquareTest {
 
     @Test
     public void testCircleSquare () {
-        Assert.assertEquals(PI*5*5, Circle.calculateSquare(5),0.002);
+        Circle circle = new Circle(10);
+        Assert.assertEquals(PI*10*10, circle.calculateSquare(), 0.0002);
+//        Assert.assertEquals(PI*5*5, Circle.calculateSquare(5),0.002);
     }
 
     @Test
     public void testTriangleSquare () {
-        Assert.assertEquals(9*12/2, Triangle.calculateSquare(9, 12),0.002);
+        Triangle triangle = new Triangle(9, 12, 14, 10);
+        Assert.assertEquals(9*12/2, triangle.calculateSquare(),0.002);
     }
 
     @Test
     public void testRectangleSquare () {
-        Assert.assertEquals(10*2, Rectangle.calculateSquare(10, 2),0.002);
+        Rectangle rectangle = new Rectangle(10, 2);
+        Assert.assertEquals(10*2, rectangle.calculateSquare(),0.002);
     }
 }

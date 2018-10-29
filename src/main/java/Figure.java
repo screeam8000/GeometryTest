@@ -1,5 +1,6 @@
-public abstract class Figure {
+public interface Figure {
 
-    private double square, perimeter;
+    double calculateSquare();
+    double calculatePerimeter();
 
 }
