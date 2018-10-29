@@ -1,9 +1,13 @@
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static java.lang.Math.PI;
 
 public class CalcPerimTest {
+
+    @Rule
+    public SomeRule someRule = new SomeRule();
 
     @Test
     public void testCirclePerim () {

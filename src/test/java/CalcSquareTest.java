@@ -1,9 +1,13 @@
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static java.lang.Math.PI;
 
 public class CalcSquareTest {
+
+    @Rule
+    public SomeRule someRule = new SomeRule();
 
     @Test
     public void testCircleSquare () {
@@ -20,6 +24,8 @@ public class CalcSquareTest {
 
     @Test
     public void testRectangleSquare () {
+
+
         Rectangle rectangle = new Rectangle(10, 2);
         Assert.assertEquals(10*2, rectangle.calculateSquare(),0.002);
     }
